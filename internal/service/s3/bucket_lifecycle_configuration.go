@@ -164,7 +164,7 @@ func ResourceBucketLifecycleConfiguration() *schema.Resource {
 							Elem: &schema.Resource{
 								Schema: map[string]*schema.Schema{
 									"newer_noncurrent_versions": {
-										Type:         schema.TypeInt,
+										Type:         nullable.TypeNullableInt,
 										Optional:     true,
 										ValidateFunc: validation.IntAtLeast(1),
 									},
@@ -182,7 +182,7 @@ func ResourceBucketLifecycleConfiguration() *schema.Resource {
 							Elem: &schema.Resource{
 								Schema: map[string]*schema.Schema{
 									"newer_noncurrent_versions": {
-										Type:         schema.TypeInt,
+										Type:         nullable.TypeNullableInt,
 										Optional:     true,
 										ValidateFunc: validation.IntAtLeast(1),
 									},
